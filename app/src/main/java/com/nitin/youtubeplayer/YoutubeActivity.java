@@ -1,7 +1,9 @@
 package com.nitin.youtubeplayer;
 
 
+import android.graphics.Color;
 import android.os.Bundle;
+import android.view.ViewGroup;
 import android.widget.Button;
 
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -9,9 +11,15 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import com.google.android.youtube.player.YouTubeBaseActivity;
 import com.google.android.youtube.player.YouTubeInitializationResult;
 import com.google.android.youtube.player.YouTubePlayer;
+import com.google.android.youtube.player.YouTubePlayerView;
 
 public class YoutubeActivity extends YouTubeBaseActivity
                 implements YouTubePlayer.OnInitializedListener {
+
+    private final String GOOGLE_API_KEY = "AIzaSyCwbNdunJe1wz06Tjxxoels9nxSESjoCnY";
+    private final String YOUTUBE_VIDEO_ID = "xLlvOo611xQ";
+    private final String YOUTUBE_PLAYLIST = "PLsEtM1pbiHlh-hbDBZwruDu9y4l4jVT7P";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,11 +28,17 @@ public class YoutubeActivity extends YouTubeBaseActivity
         ConstraintLayout constraintLayout = (ConstraintLayout)getLayoutInflater().inflate(R.layout.activity_youtube,null,false);
         setContentView(constraintLayout);
 
-        // adding a button to our layout in codes
-        Button button1 = new Button(this);  // its constructor needs a context and as our class YoutubeActivity extends activity(indirectly) , so we provided 'this'(object)
-        button1.setText("This button is created in codes");
-        button1.setLayoutParams(new ConstraintLayout.LayoutParams(300,80));
-        constraintLayout.addView(button1);
+//        // adding a button to our layout in codes
+//        Button button1 = new Button(this);  // its constructor needs a context and as our class YoutubeActivity extends activity(indirectly) and a activity is a context, so we provided 'this'(object)
+//        button1.setText("This button is created in codes");
+//        button1.setLayoutParams(new ConstraintLayout.LayoutParams(700,120));    // this will set the width and height of the button1
+//        constraintLayout.addView(button1);
+
+        YouTubePlayerView player = new YouTubePlayerView(this);
+        player.setLayoutParams(new ConstraintLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.MATCH_PARENT));
+        constraintLayout.addView(player);
+
+
 
     }
 
