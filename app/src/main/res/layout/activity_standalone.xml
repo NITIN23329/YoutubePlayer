@@ -1,39 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    app:layout_constraintWidth_min="wrap">
 
     <Button
-        android:id="@+id/playInOurApp"
+        android:id="@+id/playVideoInYouTube"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="80dp"
         android:layout_marginEnd="16dp"
-        android:text="Play Video Inside our App"
+        android:minWidth="88dip"
+        android:text="Play video in Youtube app"
         android:textAllCaps="true"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/standaloneMenu"
+        android:id="@+id/playPlaylistInWindow"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="80dp"
         android:layout_marginEnd="16dp"
-        android:text="Standalone Menu"
+        android:minWidth="300dip"
+        android:text="Play Playlist in Raised Window"
         android:textAllCaps="true"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/playInOurApp" />
+        app:layout_constraintTop_toBottomOf="@+id/playVideoInYouTube" />
 </androidx.constraintlayout.widget.ConstraintLayout>
