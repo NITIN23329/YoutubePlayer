@@ -36,7 +36,7 @@ public class StandaloneActivity extends AppCompatActivity
                 // 4th parameter is time in ms from where video should start initially.
                 // 5th parameter is boolean which is true if we want to start playing video as soon as the Player launches else false if we want the video in cue
                 // 6th parameter is whether we want to play video in a dialog above the current activity, false for full screen
-                intent = YouTubeStandalonePlayer.createVideoIntent(this, YoutubeActivity.GOOGLE_API_KEY, YoutubeActivity.YOUTUBE_VIDEO_ID,10000,true,false);
+                intent = YouTubeStandalonePlayer.createVideoIntent(this, YoutubeActivity.GOOGLE_API_KEY, YoutubeActivity.YOUTUBE_VIDEO_ID,0,true,false);
                 break;
             // only difference her is the 3rd parameter takes the ID of playlist we want to play
             // 4th parameter is the index of video in playlist we want to play
@@ -44,7 +44,7 @@ public class StandaloneActivity extends AppCompatActivity
             // 6th parameter is boolean which is true if we want to start playing video as soon as the Player launches else false if we want the video in cue
             // 7th parameter is whether we want to play video in a dialog above the current activity, false for full screen
             case R.id.playPlaylistInWindow:
-                intent = YouTubeStandalonePlayer.createPlaylistIntent(this, YoutubeActivity.GOOGLE_API_KEY, YoutubeActivity.YOUTUBE_PLAYLIST_ID,0,20000,true,true);
+                intent = YouTubeStandalonePlayer.createPlaylistIntent(this, YoutubeActivity.GOOGLE_API_KEY, YoutubeActivity.YOUTUBE_PLAYLIST_ID,0,0,true,true);
         }
         // to start a new activity from another activity, we call call startActivity and pass a intent
         if (intent != null) startActivity(intent);
