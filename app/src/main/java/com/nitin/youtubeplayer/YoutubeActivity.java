@@ -19,8 +19,8 @@ public class YoutubeActivity extends YouTubeBaseActivity
     private static final String TAG = "YoutubeActivity";
 
     public static final String GOOGLE_API_KEY = "AIzaSyCwbNdunJe1wz06Tjxxoels9nxSESjoCnY";
-    public static final String YOUTUBE_VIDEO_ID = "xLlvOo611xQ";
-    public static final String YOUTUBE_PLAYLIST_ID = "PLsEtM1pbiHlh-hbDBZwruDu9y4l4jVT7P";
+    public static final String YOUTUBE_VIDEO_ID = "rzgN_0F14io";
+    public static final String YOUTUBE_PLAYLIST_ID = "PLC1EDzqtkrh9YdadLLb26nBORggNCoRLf";
 
 
     @Override
