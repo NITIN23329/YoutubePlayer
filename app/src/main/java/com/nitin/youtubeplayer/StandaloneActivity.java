@@ -11,7 +11,8 @@ import com.google.android.youtube.player.YouTubeStandalonePlayer;
 
 public class StandaloneActivity extends AppCompatActivity
         implements View.OnClickListener {
-
+        // using Standalone of Youtube API, when orientation changes the Video don't get stop but it continue playing
+    // unlike in case of the YoutubeActivity we used in which video gets paused when orientation changes
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
